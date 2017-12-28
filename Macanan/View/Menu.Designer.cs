@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.pictureBoxPlay = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVolume = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHelp = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSetting = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNotification = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolume)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotification)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,77 +66,77 @@
             this.label2.Text = "Big Cat And Kids";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
+            // pictureBoxPlay
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(120, 115);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxPlay.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPlay.Image")));
+            this.pictureBoxPlay.Location = new System.Drawing.Point(120, 115);
+            this.pictureBoxPlay.Name = "pictureBoxPlay";
+            this.pictureBoxPlay.Size = new System.Drawing.Size(130, 130);
+            this.pictureBoxPlay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxPlay.TabIndex = 3;
+            this.pictureBoxPlay.TabStop = false;
             // 
-            // pictureBox3
+            // pictureBoxVolume
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(84, 256);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBoxVolume.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVolume.Image")));
+            this.pictureBoxVolume.Location = new System.Drawing.Point(84, 256);
+            this.pictureBoxVolume.Name = "pictureBoxVolume";
+            this.pictureBoxVolume.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxVolume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxVolume.TabIndex = 5;
+            this.pictureBoxVolume.TabStop = false;
+            this.pictureBoxVolume.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBox4
+            // pictureBoxHelp
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(139, 256);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBoxHelp.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHelp.Image")));
+            this.pictureBoxHelp.Location = new System.Drawing.Point(139, 256);
+            this.pictureBoxHelp.Name = "pictureBoxHelp";
+            this.pictureBoxHelp.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxHelp.TabIndex = 6;
+            this.pictureBoxHelp.TabStop = false;
+            this.pictureBoxHelp.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // pictureBox5
+            // pictureBoxSetting
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(195, 256);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
+            this.pictureBoxSetting.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSetting.Image")));
+            this.pictureBoxSetting.Location = new System.Drawing.Point(195, 256);
+            this.pictureBoxSetting.Name = "pictureBoxSetting";
+            this.pictureBoxSetting.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxSetting.TabIndex = 7;
+            this.pictureBoxSetting.TabStop = false;
             // 
-            // pictureBox6
+            // pictureBoxNotification
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(251, 256);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
+            this.pictureBoxNotification.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotification.Image")));
+            this.pictureBoxNotification.Location = new System.Drawing.Point(251, 256);
+            this.pictureBoxNotification.Name = "pictureBoxNotification";
+            this.pictureBoxNotification.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxNotification.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxNotification.TabIndex = 8;
+            this.pictureBoxNotification.TabStop = false;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxNotification);
+            this.Controls.Add(this.pictureBoxSetting);
+            this.Controls.Add(this.pictureBoxHelp);
+            this.Controls.Add(this.pictureBoxVolume);
+            this.Controls.Add(this.pictureBoxPlay);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Menu";
             this.Size = new System.Drawing.Size(375, 316);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVolume)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHelp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotification)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,10 +146,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        internal System.Windows.Forms.PictureBox pictureBox1;
-        internal System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBoxVolume;
+        private System.Windows.Forms.PictureBox pictureBoxSetting;
+        private System.Windows.Forms.PictureBox pictureBoxNotification;
+        internal System.Windows.Forms.PictureBox pictureBoxPlay;
+        internal System.Windows.Forms.PictureBox pictureBoxHelp;
     }
 }

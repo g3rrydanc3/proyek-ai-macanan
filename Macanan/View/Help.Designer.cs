@@ -53,50 +53,50 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(356, 40);
+            this.label2.Size = new System.Drawing.Size(353, 42);
             this.label2.TabIndex = 1;
             this.label2.Text = "- Start by placing 9 Kids on board, then 3 of them \r\n   removed from board.";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(13, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(329, 40);
+            this.label3.Size = new System.Drawing.Size(329, 42);
             this.label3.TabIndex = 2;
             this.label3.Text = "- Kids can not be moved till all the Kids are on \r\n   the board.";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(13, 181);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(345, 40);
+            this.label4.Size = new System.Drawing.Size(346, 42);
             this.label4.TabIndex = 3;
             this.label4.Text = "- You win by preventing Big Cat from being able \r\n   to move.";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(13, 224);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(355, 40);
+            this.label5.Size = new System.Drawing.Size(353, 42);
             this.label5.TabIndex = 4;
             this.label5.Text = "- You lose if Big Cat capture (jump over) 6 kids or \r\n   more.";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(13, 267);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(359, 40);
+            this.label6.Size = new System.Drawing.Size(350, 42);
             this.label6.TabIndex = 5;
             this.label6.Text = "- CAUTION: Big Cat can capture (jump over) ODD\r\n   number.";
             // 
@@ -105,8 +105,8 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(17, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 

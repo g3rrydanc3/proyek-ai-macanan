@@ -94,6 +94,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
@@ -119,6 +120,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\macan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notifications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volumeOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volumeOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_circle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
