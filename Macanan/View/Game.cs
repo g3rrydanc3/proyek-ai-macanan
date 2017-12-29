@@ -107,8 +107,11 @@ namespace Macanan
 
         private void Bidak_Clicked(object sender, EventArgs e)
         {
-            MessageBox.Show(((PictureBox)sender).Name);
-            bidak();
+            string nama = ((PictureBox)sender).Name;
+            //PROSES POTONG STRING DISINI
+
+            bidak(nama);
+            //bidak(x, y);
         }
 
 
@@ -334,9 +337,20 @@ namespace Macanan
             }
         }
 
-        private void bidak()
+        private void bidak(string nama) //JGN PARAMETER NAMA
+        //private void bidak(int x, int y)
         {
-            //string imagePath = (string)pictureBox1.ImageLocation;
+            Control[] controls = Controls.Find(nama, false);
+            if (controls.Length == 1) // 0 means not found, more - there are several controls with the same name
+            {
+                PictureBox control = controls[0] as PictureBox;
+                if (control != null)
+                {
+                    control.Image = Properties.Resources.a1;
+                }
+            }
+
+            /*//string imagePath = (string)pictureBox1.ImageLocation;
             //string path = Path.GetFileName(pictureBox1.ToString());
             string imagePath = (string)pictureBox1.ToString();
             //MessageBox.Show(imagePath);
@@ -362,7 +376,7 @@ namespace Macanan
             else if (peta[0, 0] == "Y" && klik == 1)
             {
 
-            }
+            }*/
         }
 
         #endregion
