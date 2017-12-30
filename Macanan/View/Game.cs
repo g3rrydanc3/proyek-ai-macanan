@@ -49,6 +49,9 @@ namespace Macanan
             x2y5.Image = Properties.Resources.a8;
             x3y5.Image = Properties.Resources.a9;
 
+            x2y2.Image = Properties.Resources.m1;
+            peta[2, 2] = "M";
+
             for (int i = 1; i < 4; i++)
             {
                 for (int j = 3; j < 6; j++)
@@ -67,7 +70,7 @@ namespace Macanan
                                 {
                                     control.Image = Properties.Resources.yellow_circle;
                                 }
-                            }
+                            } 
                         }
                     }
                     else
@@ -256,14 +259,14 @@ namespace Macanan
                 peta[2, 4] = "";
                 x2y4.Image = Properties.Resources.yellow_circle;
             }
-            else if (posAwal == "")
+            else if (posAwal == "x3y4")
             {
-                peta[3, 4] = "x3y4";
+                peta[3, 4] = "";
                 x3y4.Image = Properties.Resources.yellow_circle;
             }
-            else if (posAwal == "")
+            else if (posAwal == "x4y4")
             {
-                peta[4, 4] = "x4y4";
+                peta[4, 4] = "";
                 x4y4.Image = Properties.Resources.yellow_circle;
             }
             else if (posAwal == "x0y5")
@@ -296,9 +299,9 @@ namespace Macanan
                 peta[0, 6] = "";
                 x0y6.Image = Properties.Resources.yellow_circle;
             }
-            else if (posAwal == "")
+            else if (posAwal == "x1y6")
             {
-                peta[1, 6] = "x1y6";
+                peta[1, 6] = "";
                 x1y6.Image = Properties.Resources.yellow_circle;
             }
             else if (posAwal == "x2y6")
@@ -371,6 +374,7 @@ namespace Macanan
                         if (peta[x, y] == "" && klik == 1)
                         {
                             control.Image = Properties.Resources.a1;
+                            klik = 0;
                             peta[x, y] = "Y";
                             pindah();
                         }

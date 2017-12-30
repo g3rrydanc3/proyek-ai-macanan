@@ -203,6 +203,16 @@ namespace Macanan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap m1 {
+            get {
+                object obj = ResourceManager.GetObject("m1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap macan1 {
             get {
                 object obj = ResourceManager.GetObject("macan1", resourceCulture);
