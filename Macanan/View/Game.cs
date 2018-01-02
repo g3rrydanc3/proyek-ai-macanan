@@ -88,6 +88,44 @@ namespace Macanan
             peta[3, 8] = "X";
             peta[4, 1] = "X";
             peta[4, 7] = "X";
+            
+            arahgerak[0, 0] = "1,1;2,0";
+            arahgerak[2, 0] = "0,0;4,0;2,1";
+            arahgerak[4, 0] = "2,0;3,1";
+            arahgerak[1, 1] = "0,0;2,1;2,2";
+            arahgerak[2, 1] = "2,0;1,1;3,1;2,2";
+            arahgerak[3, 1] = "4,0;2,1;2,2";
+            arahgerak[0, 2] = "1,2;0,3;1,3";
+            arahgerak[1, 2] = "0,2;2,2;1,3";
+            arahgerak[2, 2] = "1,1;1,2;1,3;2,1;2,3;3,1;3,3;3,2";
+            arahgerak[3, 2] = "2,2;4,2;3,3";
+            arahgerak[4, 2] = "3,2;3,3;4,3";
+            arahgerak[0, 3] = "0,2;0,4;1,3";
+            arahgerak[1, 3] = "0,2;0,3;0,4;1,2;1,4;2,2;2,3;2,4";
+            arahgerak[2, 3] = "1,3;3,3;2,2;2,4";
+            arahgerak[3, 3] = "2,2;2,3;2,4;3,2;3,4;4,2;4,3;4,4";
+            arahgerak[4, 3] = "4,2;4,4;3,3";
+            arahgerak[0, 4] = "0,3;0,5;1,3;1,4;1,5";
+            arahgerak[1, 4] = "0,4;2,4;1,3;1,5";
+            arahgerak[2, 4] = "1,3;1,4;1,5;2,3;2,5;3,3;3,4;3,5";
+            arahgerak[3, 4] = "2,4;4,4;3,3;3,5";
+            arahgerak[4, 4] = "3,3;3,4;3,5;4,3;4,5";
+            arahgerak[0, 5] = "0,4;0,6;1,5";
+            arahgerak[1, 5] = "0,4;0,5;0,6;1,4;1,6;2,4;2,5;2,6";
+            arahgerak[2, 5] = "1,5;3,5;2,4;2,6";
+            arahgerak[3, 5] = "2,4;2,5;2,6;3,4;3,6;4,4;4,5;4,6";
+            arahgerak[4, 5] = "3,5;4,4;4,6";
+            arahgerak[0, 6] = "0,5;1,5;1,6";
+            arahgerak[1, 6] = "0,6;2,6;1,5";
+            arahgerak[2, 6] = "1,5;1,6;1,7;2,5;2,7;3,5;3,6;3,7";
+            arahgerak[3, 6] = "2,6;4,6;3,5";
+            arahgerak[4, 6] = "3,6;3,5;4,5";
+            arahgerak[1, 7] = "2,6;0,8;2,7";
+            arahgerak[2, 7] = "1,7;3,7;2,6;2,8";
+            arahgerak[3, 7] = "2,7;2,6;4,8";
+            arahgerak[0, 8] = "1,7;2,8";
+            arahgerak[2, 8] = "2,7;0,8;4,8";
+            arahgerak[4, 8] = "3,7;2,8";
         }
 
         private void Pertama_Clicked(object sender, EventArgs e)
@@ -136,6 +174,7 @@ namespace Macanan
         #region Logic Game
 
         String[,] peta = new String[5, 9];
+        String[,] arahgerak = new String[5, 9];
         int klik = 0;
         String posAwal = "";
         //baris 5 kolom 9
