@@ -51,6 +51,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

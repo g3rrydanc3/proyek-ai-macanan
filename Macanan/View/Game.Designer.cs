@@ -67,6 +67,8 @@
             this.x4y8 = new System.Windows.Forms.PictureBox();
             this.x4y0 = new System.Windows.Forms.PictureBox();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelSisaAnak = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.x0y0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x2y0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x1y1)).BeginInit();
@@ -562,11 +564,34 @@
             this.pictureBoxBack.TabIndex = 37;
             this.pictureBoxBack.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(937, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 30);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Sisa Anak :";
+            // 
+            // labelSisaAnak
+            // 
+            this.labelSisaAnak.AutoSize = true;
+            this.labelSisaAnak.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSisaAnak.Location = new System.Drawing.Point(1056, 5);
+            this.labelSisaAnak.Name = "labelSisaAnak";
+            this.labelSisaAnak.Size = new System.Drawing.Size(24, 30);
+            this.labelSisaAnak.TabIndex = 39;
+            this.labelSisaAnak.Text = "0";
+            this.labelSisaAnak.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Controls.Add(this.labelSisaAnak);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxBack);
             this.Controls.Add(this.x0y8);
             this.Controls.Add(this.x2y8);
@@ -609,7 +634,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Game";
             this.Size = new System.Drawing.Size(1189, 628);
-            this.Load += new System.EventHandler(this.Game_Load);
+            this.VisibleChanged += new System.EventHandler(this.Game_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.x0y0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x2y0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x1y1)).EndInit();
@@ -649,6 +674,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.x4y0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -692,5 +718,7 @@
         internal System.Windows.Forms.PictureBox x4y8;
         internal System.Windows.Forms.PictureBox x4y0;
         internal System.Windows.Forms.PictureBox pictureBoxBack;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSisaAnak;
     }
 }
