@@ -63,6 +63,7 @@ namespace Macanan
         String[,] arahgerak = new String[5, 9];
         Boolean pindah_Mode = false;
         Point pindah_PosisiAwal;
+        Point cursor_Sekarang;
         AI ai;
         //baris 5 kolom 9
 
@@ -229,29 +230,54 @@ namespace Macanan
 
         private bool moveValid()
         {
-            return true;
+            int pindah = 0;
+            if (pindah_Mode)
+            {
+                String[] split = arahgerak[pindah_PosisiAwal.X, pindah_PosisiAwal.Y].Split(';');
+                for (int i = 0; i < split.Length; i++)
+                {
+                    String[] potong = split[i].Split(',');
+                    if (cursor_Sekarang.X == Convert.ToInt32(potong[0]) && cursor_Sekarang.Y == Convert.ToInt32(potong[1]))
+                    {
+                        pindah = 1;
+                    }
+                }
+            }
+            if (pindah == 1 || (pindah == 0 && sisaAnak > 0))
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
         }
-
-
-
-        
+               
 
 
         private void bidak(int x, int y)
         {
-            if (moveValid())
-            {
+            cursor_Sekarang.X = x;
+            cursor_Sekarang.Y = y;
+
+            
                 if (peta[x, y] == 'E')
                 {
                     if (pindah_Mode)
                     {
-                        pindah_Mode = false;
+                        if (moveValid())
+                        {
+                            pindah_Mode = false;
 
-                        peta[x, y] = 'Y';
+                            peta[x, y] = 'Y';
 
-                        peta[pindah_PosisiAwal.X, pindah_PosisiAwal.Y] = 'E';
-                        pindah_PosisiAwal.X = 0;
-                        pindah_PosisiAwal.Y = 0;
+                            peta[pindah_PosisiAwal.X, pindah_PosisiAwal.Y] = 'E';
+                            pindah_PosisiAwal.X = 0;
+                            pindah_PosisiAwal.Y = 0;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid move.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
@@ -269,7 +295,7 @@ namespace Macanan
                         }
                     }
                 }
-                else if (peta[x, y] == 'Y')
+                else if (peta[x, y] == 'Y' && sisaAnak <= 0)
                 {
                     pindah_Mode = true;
 
@@ -277,13 +303,8 @@ namespace Macanan
                     pindah_PosisiAwal.Y = y;
                 }
                 refresh();
-            }
-            else
-            {
-                MessageBox.Show("Invalid move.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
-
         #endregion
     }
 }
