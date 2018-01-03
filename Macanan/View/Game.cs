@@ -259,50 +259,49 @@ namespace Macanan
             cursor_Sekarang.X = x;
             cursor_Sekarang.Y = y;
 
-            
-                if (peta[x, y] == 'E')
+            if (peta[x, y] == 'E')
+            {
+                if (pindah_Mode)
                 {
-                    if (pindah_Mode)
+                    if (moveValid())
                     {
-                        if (moveValid())
-                        {
-                            pindah_Mode = false;
+                        pindah_Mode = false;
 
+                        peta[x, y] = 'Y';
+
+                        peta[pindah_PosisiAwal.X, pindah_PosisiAwal.Y] = 'E';
+                        pindah_PosisiAwal.X = 0;
+                        pindah_PosisiAwal.Y = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid move.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    if (sisaAnak > 0)
+                    {
+                        if (peta[x, y] == 'E')
+                        {
                             peta[x, y] = 'Y';
-
-                            peta[pindah_PosisiAwal.X, pindah_PosisiAwal.Y] = 'E';
-                            pindah_PosisiAwal.X = 0;
-                            pindah_PosisiAwal.Y = 0;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid move.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            sisaAnak--;
                         }
                     }
                     else
                     {
-                        if (sisaAnak > 0)
-                        {
-                            if (peta[x, y] == 'E')
-                            {
-                                peta[x, y] = 'Y';
-                                sisaAnak--;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Anak sudah habis.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                        MessageBox.Show("Anak sudah habis.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-                else if (peta[x, y] == 'Y' && sisaAnak <= 0)
-                {
-                    pindah_Mode = true;
+            }
+            else if (peta[x, y] == 'Y' && sisaAnak <= 0)
+            {
+                pindah_Mode = true;
 
-                    pindah_PosisiAwal.X = x;
-                    pindah_PosisiAwal.Y = y;
-                }
-                refresh();
+                pindah_PosisiAwal.X = x;
+                pindah_PosisiAwal.Y = y;
+            }
+            refresh();
             
         }
         #endregion
