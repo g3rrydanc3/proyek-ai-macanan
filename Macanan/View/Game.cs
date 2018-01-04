@@ -66,6 +66,7 @@ namespace Macanan
         Point cursor_Sekarang;
         AI ai;
         //baris 5 kolom 9
+        int giliran = 0;
 
         Random rand = new Random();
         int pos1 = 0, pos2 = 0, pos3 = 0;
@@ -258,48 +259,56 @@ namespace Macanan
         {
             cursor_Sekarang.X = x;
             cursor_Sekarang.Y = y;
-
-            if (peta[x, y] == 'E')
+            if (giliran == 0)
             {
-                if (pindah_Mode)
+                if (peta[x, y] == 'E')
                 {
-                    if (moveValid())
+                    if (pindah_Mode)
                     {
-                        pindah_Mode = false;
-
-                        peta[x, y] = 'Y';
-
-                        peta[pindah_PosisiAwal.X, pindah_PosisiAwal.Y] = 'E';
-                        pindah_PosisiAwal.X = 0;
-                        pindah_PosisiAwal.Y = 0;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid move.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    if (sisaAnak > 0)
-                    {
-                        if (peta[x, y] == 'E')
+                        if (moveValid())
                         {
+                            pindah_Mode = false;
+
                             peta[x, y] = 'Y';
-                            sisaAnak--;
+
+                            peta[pindah_PosisiAwal.X, pindah_PosisiAwal.Y] = 'E';
+                            pindah_PosisiAwal.X = 0;
+                            pindah_PosisiAwal.Y = 0;
+                            giliran = 1;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid move.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Anak sudah habis.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (sisaAnak > 0)
+                        {
+                            if (peta[x, y] == 'E')
+                            {
+                                peta[x, y] = 'Y';
+                                sisaAnak--;
+                                giliran = 1;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Anak sudah habis.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
-            }
-            else if (peta[x, y] == 'Y' && sisaAnak <= 0)
-            {
-                pindah_Mode = true;
+                else if (peta[x, y] == 'Y' && sisaAnak <= 0)
+                {
+                    pindah_Mode = true;
 
-                pindah_PosisiAwal.X = x;
-                pindah_PosisiAwal.Y = y;
+                    pindah_PosisiAwal.X = x;
+                    pindah_PosisiAwal.Y = y;
+                }
+            }else
+            {
+                //giliran macan
+                giliran = 0;
             }
             refresh();
             
