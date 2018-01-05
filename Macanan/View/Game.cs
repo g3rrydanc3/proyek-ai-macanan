@@ -280,7 +280,7 @@ namespace Macanan
             pindah_PosisiAwal.X = 0;
             pindah_PosisiAwal.Y = 0;
 
-            labelAnakDImakan.Text = eaten.text
+            labelAnakDImakan.Text = eaten.ToString();
         }
 
         public void cekMenang()
