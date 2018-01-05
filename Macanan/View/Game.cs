@@ -64,7 +64,7 @@ namespace Macanan
         Boolean pindah_Mode = false;
         Point pindah_PosisiAwal;
         Point cursor_Sekarang;
-        AI ai;
+        AI ai = new AI();
         //baris 5 kolom 9
         int giliran = 0;
 
@@ -309,6 +309,8 @@ namespace Macanan
             {
                 //giliran macan
                 giliran = 0;
+                Point bestMove = ai.getBestMove(peta, 0);
+                MessageBox.Show(bestMove.X + " " + bestMove.Y);
             }
             refresh();
             
