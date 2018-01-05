@@ -69,6 +69,8 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelSisaAnak = new System.Windows.Forms.Label();
+            this.labelAnakDImakan = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.x0y0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x2y0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x1y1)).BeginInit();
@@ -568,9 +570,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(937, 5);
+            this.label1.Location = new System.Drawing.Point(1015, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 30);
+            this.label1.Size = new System.Drawing.Size(142, 37);
             this.label1.TabIndex = 38;
             this.label1.Text = "Sisa Anak :";
             // 
@@ -578,18 +580,41 @@
             // 
             this.labelSisaAnak.AutoSize = true;
             this.labelSisaAnak.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSisaAnak.Location = new System.Drawing.Point(1056, 5);
+            this.labelSisaAnak.Location = new System.Drawing.Point(1134, 5);
             this.labelSisaAnak.Name = "labelSisaAnak";
-            this.labelSisaAnak.Size = new System.Drawing.Size(24, 30);
+            this.labelSisaAnak.Size = new System.Drawing.Size(32, 37);
             this.labelSisaAnak.TabIndex = 39;
             this.labelSisaAnak.Text = "0";
             this.labelSisaAnak.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // labelAnakDImakan
+            // 
+            this.labelAnakDImakan.AutoSize = true;
+            this.labelAnakDImakan.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAnakDImakan.Location = new System.Drawing.Point(958, 5);
+            this.labelAnakDImakan.Name = "labelAnakDImakan";
+            this.labelAnakDImakan.Size = new System.Drawing.Size(32, 37);
+            this.labelAnakDImakan.TabIndex = 41;
+            this.labelAnakDImakan.Text = "0";
+            this.labelAnakDImakan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(781, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(201, 37);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Anak Dimakan :";
+            // 
             // Game
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Controls.Add(this.labelAnakDImakan);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.labelSisaAnak);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxBack);
@@ -720,5 +745,7 @@
         internal System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelSisaAnak;
+        private System.Windows.Forms.Label labelAnakDImakan;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -67,6 +67,7 @@ namespace Macanan
         AI ai = new AI();
         //baris 5 kolom 9
         int giliran = 0;
+        int eaten = 0;
 
         Random rand = new Random();
         int pos1 = 0, pos2 = 0, pos3 = 0;
@@ -253,7 +254,42 @@ namespace Macanan
             }
         }
                
+        private void macanPindah(int x, int y)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (peta[i, j] == 'M')
+                    {
+                        pindah_PosisiAwal.X = i;
+                        pindah_PosisiAwal.Y = j;
+                        break;
+                    }
+                }
+            }
 
+            if (peta[x,y] != 'E')
+            {
+                eaten += 1;
+            }
+
+            peta[x, y] = 'M';
+
+            peta[pindah_PosisiAwal.X, pindah_PosisiAwal.Y] = 'E';
+            pindah_PosisiAwal.X = 0;
+            pindah_PosisiAwal.Y = 0;
+
+            labelAnakDImakan.Text = eaten.text
+        }
+
+        public void cekMenang()
+        {
+            if (eaten == 6)
+            {
+                MessageBox.Show("Menang");
+            }
+        }
 
         private void bidak(int x, int y)
         {
@@ -305,15 +341,18 @@ namespace Macanan
                     pindah_PosisiAwal.X = x;
                     pindah_PosisiAwal.Y = y;
                 }
-            }else
+            }
+            else
             {
-                //giliran macan
-                giliran = 0;
-                Point bestMove = ai.getBestMove(peta, 0);
-                MessageBox.Show(bestMove.X + " " + bestMove.Y);
+                if(peta[x, y] == 'Y' || peta[x, y] == 'E')
+                {
+                    macanPindah(x, y);
+
+                    giliran = 0;
+                }
             }
             refresh();
-            
+            cekMenang();
         }
         #endregion
     }

@@ -9,7 +9,7 @@ namespace Macanan
 {
     class AI
     {
-        //https://www.geeksforgeeks.org/minima  x-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/
+        //https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/
         public Point getBestMove(char[,] peta, int eaten)
         {
             Point bestMove = new Point();
@@ -89,7 +89,7 @@ namespace Macanan
                     }
                 }
             }
-            //score = Math.Max(score, tempScore);
+            score = Math.Max(score, tempScore);
 
             return score;
         }
@@ -100,12 +100,12 @@ namespace Macanan
  
             // If Maximizer has won the game return his/her
             // evaluated score
-            if (eaten == 6)
+            if (score == 10)
                 return score;
  
             // If Minimizer has won the game return his/her
             // evaluated score
-            if (score == -6)
+            if (score == -10)
                 return score;
  
             // If there are no more moves and no winner then
@@ -136,7 +136,7 @@ namespace Macanan
                             // Undo the move
                             peta[i, j] = 'E';
                         }
-        }
+                    }
                 }
                 return best;
             }
@@ -147,9 +147,9 @@ namespace Macanan
                 int best = 1000;
  
                 // Traverse all cells
-                for (int i = 0; i<3; i++)
+                for (int i = 0; i<5; i++)
                 {
-                    for (int j = 0; j<3; j++)
+                    for (int j = 0; j<9; j++)
                     {
                         // Check if cell is empty
                         if (peta[i, j]=='E')
