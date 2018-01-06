@@ -269,10 +269,10 @@ namespace Macanan
                 }
             }
 
-            /*if (peta[x,y] != 'E')
+            if (peta[x,y] != 'E')
             {
                 eaten += 1;
-            }*/
+            }
 
             peta[x, y] = 'M';
 
@@ -280,7 +280,7 @@ namespace Macanan
             pindah_PosisiAwal.X = 0;
             pindah_PosisiAwal.Y = 0;
 
-            //labelAnakDImakan.Text = eaten.ToString();
+            labelAnakDImakan.Text = eaten.ToString();
         }
 
         public void cekMenang()
@@ -347,10 +347,6 @@ namespace Macanan
                 if(peta[x, y] == 'Y' || peta[x, y] == 'E')
                 {
                     macanPindah(x, y);
-
-                    //Label Anak Dimakan tambah
-                    eaten += 1;
-                    labelAnakDImakan.Text = eaten.ToString();
 
                     giliran = 0;
                 }
