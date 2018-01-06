@@ -61,6 +61,7 @@ namespace Macanan
 
         Char[,] peta = new Char[5, 9];
         String[,] arahgerak = new String[5, 9];
+        String[,] arah = new String[5, 9];
         Boolean pindah_Mode = false;
         Point pindah_PosisiAwal;
         Point cursor_Sekarang;
@@ -78,42 +79,115 @@ namespace Macanan
         private void init()
         {
             arahgerak[0, 0] = "1,1;2,0";
+            arah[0, 0] = "kanan bawah;bawah";
+
             arahgerak[2, 0] = "0,0;4,0;2,1";
+            arah[2, 0] = "atas;bawah;kanan";
+
             arahgerak[4, 0] = "2,0;3,1";
+            arah[4, 0] = "atas;kanan atas";
+
             arahgerak[1, 1] = "0,0;2,1;2,2";
+            arah[1, 1] = "kiri atas;bawah;kanan bawah";
+
             arahgerak[2, 1] = "2,0;1,1;3,1;2,2";
+            arah[2, 1] = "kiri;atas;bawah;kanan";
+
             arahgerak[3, 1] = "4,0;2,1;2,2";
+            arah[3, 1] = "kiri bawah;atas;kanan atas";
+
             arahgerak[0, 2] = "1,2;0,3;1,3";
+            arah[0, 2] = "bawah;kanan;kanan bawah";
+
             arahgerak[1, 2] = "0,2;2,2;1,3";
+            arah[1, 2] = "atas;bawah;kanan";
+
             arahgerak[2, 2] = "1,1;1,2;1,3;2,1;2,3;3,1;3,3;3,2";
+            arah[2, 2] = "kiri atas;atas;kanan atas;kiri;kanan;kiri bawah;kanan bawah; bawah";
+
             arahgerak[3, 2] = "2,2;4,2;3,3";
+            arah[3, 2] = "atas;bawah;kanan";
+
             arahgerak[4, 2] = "3,2;3,3;4,3";
+            arah[4, 2] = "atas;kanan atas;kanan";
+
             arahgerak[0, 3] = "0,2;0,4;1,3";
+            arah[0, 3] = "kiri;kanan;bawah";
+
             arahgerak[1, 3] = "0,2;0,3;0,4;1,2;1,4;2,2;2,3;2,4";
+            arah[1, 3] = "kiri atas;atas;kanan atas;kiri;kanan;kiri bawah;bawah;kanan bawah";
+
             arahgerak[2, 3] = "1,3;3,3;2,2;2,4";
+            arah[2, 3] = "atas;bawah;kiri;kanan";
+
             arahgerak[3, 3] = "2,2;2,3;2,4;3,2;3,4;4,2;4,3;4,4";
+            arah[3, 3] = "kiri atas;atas;kanan atas;kiri;kanan;kiri bawah;bawah;kanan bawah";
+
             arahgerak[4, 3] = "4,2;4,4;3,3";
+            arah[4, 3] = "kiri;kanan;atas";
+
             arahgerak[0, 4] = "0,3;0,5;1,3;1,4;1,5";
+            arah[0, 4] = "kiri;kanan;kiri bawah;bawah;kanan bawah";
+
             arahgerak[1, 4] = "0,4;2,4;1,3;1,5";
+            arah[1, 4] = "atas;bawah;kiri;kanan";
+
             arahgerak[2, 4] = "1,3;1,4;1,5;2,3;2,5;3,3;3,4;3,5";
+            arah[2, 4] = "kiri atas;atas;kanan atas;kiri;kanan;kiri bawah;bawah;kanan bawah";
+
             arahgerak[3, 4] = "2,4;4,4;3,3;3,5";
+            arah[3, 4] = "atas;bawah;kiri;kanan";
+
             arahgerak[4, 4] = "3,3;3,4;3,5;4,3;4,5";
+            arah[4, 4] = "kiri atas;atas;kanan atas;kiri;kanan";
+
             arahgerak[0, 5] = "0,4;0,6;1,5";
+            arah[0, 5] = "kiri;kanan;bawah";
+
             arahgerak[1, 5] = "0,4;0,5;0,6;1,4;1,6;2,4;2,5;2,6";
+            arah[1, 5] = "kiri atas;atas;kanan atas;kiri;kanan;kiri bawah;bawah;kanan bawah";
+
             arahgerak[2, 5] = "1,5;3,5;2,4;2,6";
+            arah[2, 5] = "atas;bawah;kiri;kanan";
+
             arahgerak[3, 5] = "2,4;2,5;2,6;3,4;3,6;4,4;4,5;4,6";
+            arah[3, 5] = "kiri atas;atas;kanan atas;kiri;kanan;kiri bawah;bawah;kanan bawah";
+
             arahgerak[4, 5] = "3,5;4,4;4,6";
+            arah[4, 5] = "atas;kiri;kanan";
+
             arahgerak[0, 6] = "0,5;1,5;1,6";
+            arah[0, 6] = "kiri;kiri bawah;bawah";
+
             arahgerak[1, 6] = "0,6;2,6;1,5";
+            arah[1, 6] = "atas;bawah;kiri";
+
             arahgerak[2, 6] = "1,5;1,6;1,7;2,5;2,7;3,5;3,6;3,7";
+            arah[2, 6] = "kiri atas;atas;kanan atas;kiri;kanan;kiri bawah;bawah;kanan bawah";
+
             arahgerak[3, 6] = "2,6;4,6;3,5";
+            arah[3, 6] = "atas;bawah;kiri";
+
             arahgerak[4, 6] = "3,6;3,5;4,5";
+            arah[4, 6] = "atas;kiri atas;kiri";
+
             arahgerak[1, 7] = "2,6;0,8;2,7";
+            arah[1, 7] = "kiri bawah;kanan atas;bawah";
+
             arahgerak[2, 7] = "1,7;3,7;2,6;2,8";
+            arah[2, 7] = "atas;bawah;kiri;kanan";
+
             arahgerak[3, 7] = "2,7;2,6;4,8";
+            arah[3, 7] = "atas;kiri atas;kanan bawah";
+
             arahgerak[0, 8] = "1,7;2,8";
+            arah[0, 8] = "kiri bawah;bawah";
+
             arahgerak[2, 8] = "2,7;0,8;4,8";
+            arah[2, 8] = "kiri;atas;bawah";
+
             arahgerak[4, 8] = "3,7;2,8";
+            arah[4, 8] = "kiri atas;atas";
 
 
             reset();
@@ -262,7 +336,7 @@ namespace Macanan
             }
         }
                
-        private void macanPindah(int x, int y)
+        private void macanPindah()
         {
             for (int i = 0; i < 5; i++)
             {
@@ -276,69 +350,416 @@ namespace Macanan
                     }
                 }
             }
+            String[] split = arahgerak[pindah_PosisiAwal.X, pindah_PosisiAwal.Y].Split(';');
+            String[] splitArah = arah[pindah_PosisiAwal.X, pindah_PosisiAwal.Y].Split(';');
+            int[] anak = new int[split.Length];
+            int ret = 0; //ret 1 => tidak ada yg dimakan
+            int posX = 0, posY = 0, xx = 0, yy = 0;
 
-
-            if (pindah_PosisiAwal.Y == y)
+            for (int i = 0; i < split.Length; i++)
             {
-                if (pindah_PosisiAwal.X <= x)
+                String[] potong = split[i].Split(',');
+                if (peta[Convert.ToInt32(potong[0]), Convert.ToInt32(potong[1])] == 'Y')
                 {
-                    for (int i = pindah_PosisiAwal.X; i < x; i++)   //ATAS
+                    posX = Convert.ToInt32(potong[0]);
+                    posY = Convert.ToInt32(potong[1]);
+                    if (splitArah[i] == "atas")
                     {
-                        if (peta[i, y] == 'Y')
+                        while (posX > -1 && peta[posX, posY] != 'E')
                         {
-                            eaten += 1;
-                            peta[i, y] = 'E';
+                            if (peta[posX, posY] != 'X')
+                            {
+                                anak[i] = anak[i] + 1;
+                            }
+                            posX--;
+                        }
+                        if (posX > -1)
+                        {
+                            if (peta[posX, posY] == 'E')
+                            {
+                                if (anak[i] % 2 == 1)
+                                {
+                                    eaten = eaten + anak[i];
+                                    ret = 0;
+                                    xx = Convert.ToInt32(potong[0]);
+                                    yy = Convert.ToInt32(potong[1]);
+                                    while (xx > -1 && peta[xx, yy] != 'E')
+                                    {
+                                        if (xx > -1)
+                                        {
+                                            peta[xx, yy] = 'E';
+                                        }
+                                        xx--;
+                                    }
+                                    peta[posX, posY] = 'M';
+                                    break;
+                                }
+                                else
+                                {
+                                    ret = 1;
+                                }
+                            }
+                            else
+                            {
+                                ret = 1;
+                            }
+                        }
+                        else
+                        {
+                            ret = 1;
+                        }
+
+                    }
+                    else if (splitArah[i] == "kiri atas")
+                    {
+                        while (posY > -1 && posX > -1 && peta[posX, posY] != 'E')
+                        {
+                            if (peta[posX, posY] != 'X')
+                            {
+                                anak[i] = anak[i] + 1;
+                            }
+                            posX--;
+                            posY--;
+                        }
+                        if (posX > -1 && posY > -1)
+                        {
+                            if (peta[posX + 1, posY + 1] == 'E')
+                            {
+                                if (anak[i] % 2 == 1)
+                                {
+                                    eaten = eaten + anak[i];
+                                    ret = 0;
+                                    xx = Convert.ToInt32(potong[0]);
+                                    yy = Convert.ToInt32(potong[1]);
+                                    while (yy > -1 && xx > -1 && peta[xx, yy] != 'E')
+                                    {
+                                        if (xx > -1 && yy > -1)
+                                        {
+                                            peta[xx, yy] = 'E';
+                                        }
+                                        xx--;
+                                        yy--;
+                                    }
+                                    peta[posX, posY] = 'M';
+                                    break;
+                                }
+                                else
+                                {
+                                    ret = 1;
+                                }
+                            }
+                            else
+                            {
+                                ret = 1;
+                            }
+                        }
+                        else
+                        {
+                            ret = 1;
+                        }
+                    }
+                    else if (splitArah[i] == "kanan atas")
+                    {
+                        while (posY < 9 && posX > -1 && peta[posX, posY] != 'E')
+                        {
+                            if (peta[posX, posY] != 'X')
+                            {
+                                anak[i] = anak[i] + 1;
+                            }
+                            posX--;
+                            posY++;
+                        }
+                        if (posX > -1 && posY < 9)
+                        {
+                            if (peta[posX, posY] == 'E')
+                            {
+                                if (anak[i] % 2 == 1)
+                                {
+                                    eaten = eaten + anak[i];
+                                    ret = 0;
+                                    xx = Convert.ToInt32(potong[0]);
+                                    yy = Convert.ToInt32(potong[1]);
+                                    while (yy < 9 && xx > -1 && peta[xx, yy] != 'E')
+                                    {
+                                        if (xx > -1 && yy < 9)
+                                        {
+                                            peta[xx, yy] = 'E';
+                                        }
+                                        xx--;
+                                        yy++;
+                                    }
+                                    peta[posX, posY] = 'M';
+                                    break;
+                                }
+                                else
+                                {
+                                    ret = 1;
+                                }
+                            }
+                            else
+                            {
+                                ret = 1;
+                            }
+                        }
+                        else
+                        {
+                            ret = 1;
+                        }
+                    }
+                    else if (splitArah[i] == "kiri")
+                    {
+                        while (posY > -1 && peta[posX, posY] != 'E')
+                        {
+                            if (peta[posX, posY] != 'X')
+                            {
+                                anak[i] = anak[i] + 1;
+                            }
+                            posY--;
+                        }
+                        if (posY > -1)
+                        {
+                            if (peta[posX, posY] == 'E')
+                            {
+                                if (anak[i] % 2 == 1)
+                                {
+                                    eaten = eaten + anak[i];
+                                    ret = 0;
+                                    xx = Convert.ToInt32(potong[0]);
+                                    yy = Convert.ToInt32(potong[1]);
+                                    while (yy > -1 && peta[xx, yy] != 'E')
+                                    {
+                                        if (yy > -1)
+                                        {
+                                            peta[xx, yy] = 'E';
+                                        }
+                                        yy--;
+                                    }
+                                    peta[posX, posY] = 'M';
+                                    break;
+                                }
+                                else
+                                {
+                                    ret = 1;
+                                }
+                            }
+                            else
+                            {
+                                ret = 1;
+                            }
+                        }
+                        else
+                        {
+                            ret = 1;
+                        }
+                    }
+                    else if (splitArah[i] == "kanan")
+                    {
+                        while (posY < 9 && peta[posX, posY] != 'E')
+                        {
+                            if (peta[posX, posY] != 'X')
+                            {
+                                anak[i] = anak[i] + 1;
+                            }
+                            posY++;
+                        }
+                        if (posY < 9)
+                        {
+                            if (peta[posX, posY] == 'E')
+                            {
+                                if (anak[i] % 2 == 1)
+                                {
+                                    eaten = eaten + anak[i];
+                                    ret = 0;
+                                    xx = Convert.ToInt32(potong[0]);
+                                    yy = Convert.ToInt32(potong[1]);
+                                    while (yy < 9 && peta[xx, yy] != 'E')
+                                    {
+                                        if (yy < 9)
+                                        {
+                                            peta[xx, yy] = 'E';
+                                        }
+                                        yy++;
+                                    }
+                                    peta[posX, posY] = 'M';
+                                    break;
+                                }
+                                else
+                                {
+                                    ret = 1;
+                                }
+                            }
+                            else
+                            {
+                                ret = 1;
+                            }
+                        }
+                        else
+                        {
+                            ret = 1;
+                        }
+                    }
+                    else if (splitArah[i] == "bawah")
+                    {
+                        while (posX < 5 && peta[posX, posY] != 'E')
+                        {
+                            if (peta[posX, posY] != 'X')
+                            {
+                                anak[i] = anak[i] + 1;
+                            }
+                            posX++;
+                        }
+                        if (posX < 5)
+                        {
+                            if (peta[posX, posY] == 'E')
+                            {
+                                if (anak[i] % 2 == 1)
+                                {
+                                    eaten = eaten + anak[i];
+                                    ret = 0;
+                                    xx = Convert.ToInt32(potong[0]);
+                                    yy = Convert.ToInt32(potong[1]);
+                                    while (xx < 5 && peta[xx, yy] != 'E')
+                                    {
+                                        if (xx < 5)
+                                        {
+                                            peta[xx, yy] = 'E';
+                                        }
+                                        xx++;
+                                    }
+                                    peta[posX, posY] = 'M';
+                                    break;
+                                }
+                                else
+                                {
+                                    ret = 1;
+                                }
+                            }
+                            else
+                            {
+                                ret = 1;
+                            }
+                        }
+                        else
+                        {
+                            ret = 1;
+                        }
+                    }
+                    else if (splitArah[i] == "kiri bawah")
+                    {
+                        while (posY > -1 && posX < 5 && peta[posX, posY] != 'E')
+                        {
+                            if (peta[posX, posY] != 'X')
+                            {
+                                anak[i] = anak[i] + 1;
+                            }
+                            posX++;
+                            posY--;
+                        }
+                        if (posX < 5 && posY > -1)
+                        {
+                            if (peta[posX, posY] == 'E')
+                            {
+                                if (anak[i] % 2 == 1)
+                                {
+                                    eaten = eaten + anak[i];
+                                    ret = 0;
+                                    xx = Convert.ToInt32(potong[0]);
+                                    yy = Convert.ToInt32(potong[1]);
+                                    while (yy > -1 && xx < 5 && peta[xx, yy] != 'E')
+                                    {
+                                        if (xx < 5 && yy > -1)
+                                        {
+                                            peta[xx, yy] = 'E';
+                                        }
+                                        xx++;
+                                        yy--;
+                                    }
+                                    peta[posX, posY] = 'M';
+                                    break;
+                                }
+                                else
+                                {
+                                    ret = 1;
+                                }
+                            }
+                            else
+                            {
+                                ret = 1;
+                            }
+                        }
+                        else
+                        {
+                            ret = 1;
+                        }
+                    }
+                    else if (splitArah[i] == "kanan bawah")
+                    {
+                        while (posY < 9 && posX < 5 && peta[posX, posY] != 'E')
+                        {
+                            if (peta[posX, posY] != 'X')
+                            {
+                                anak[i] = anak[i] + 1;
+                            }
+                            posX++;
+                            posY++;
+                        }
+                        if (posX < 5 && posY < 9)
+                        {
+                            if (peta[posX, posY] == 'E')
+                            {
+                                if (anak[i] % 2 == 1)
+                                {
+                                    eaten = eaten + anak[i];
+                                    ret = 0;
+                                    xx = Convert.ToInt32(potong[0]);
+                                    yy = Convert.ToInt32(potong[1]);
+                                    while (yy < 9 && xx < 5 && peta[xx, yy] != 'E')
+                                    {
+                                        if (xx < 5 && yy < 9)
+                                        {
+                                            peta[xx, yy] = 'E';
+                                        }
+                                        xx++;
+                                        yy++;
+                                    }
+                                    peta[posX, posY] = 'M';
+                                    break;
+                                }
+                                else
+                                {
+                                    ret = 1;
+                                }
+                            }
+                            else
+                            {
+                                ret = 1;
+                            }
+                        }
+                        else
+                        {
+                            ret = 1;
                         }
                     }
                 }
                 else
                 {
-                    for (int i = x; i < pindah_PosisiAwal.X; i++)   //BAWAH
-                    {
-                        if (peta[i, y] == 'Y')
-                        {
-                            eaten += 1;
-                            peta[i, y] = 'E';
-                        }
-                    }
+                    anak[i] = 0;
+                    ret = 1;
                 }
             }
 
-            if (pindah_PosisiAwal.X == x)
+            if (ret == 1)
             {
-                if (pindah_PosisiAwal.Y <= y)
+                Random rand = new Random();
+                int random = rand.Next(0, split.Length);
+                String[] bagi = split[random].Split(',');
+                while (peta[Convert.ToInt32(bagi[0]), Convert.ToInt32(bagi[1])] != 'E')
                 {
-                    for (int i = pindah_PosisiAwal.Y; i < y; i++)   //KIRI
-                    {
-                        if (peta[x, i] == 'Y')
-                        {
-                            eaten += 1;
-                            peta[x, i] = 'E';
-                        }
-                    }
+                    random = rand.Next(0, split.Length);
+                    bagi = split[random].Split(',');
                 }
-                else
-                {
-                    for (int i = y; i < pindah_PosisiAwal.Y; i++)   //KANAN
-                    {
-                        if (peta[x, i] == 'Y')
-                        {
-                            eaten += 1;
-                            peta[x, i] = 'E';
-                        }
-                    }
-                }
+                peta[Convert.ToInt32(bagi[0]), Convert.ToInt32(bagi[1])] = 'M';
             }
-            
-
-            
-
-            if (peta[x,y] != 'E')
-            {
-                eaten += 1;
-            }
-
-            peta[x, y] = 'M';
 
             peta[pindah_PosisiAwal.X, pindah_PosisiAwal.Y] = 'E';
             pindah_PosisiAwal.X = 0;
@@ -413,12 +834,8 @@ namespace Macanan
             }
             else
             {
-                if(peta[x, y] == 'Y' || peta[x, y] == 'E')
-                {
-                    macanPindah(x, y);
-
-                    giliran = 0;
-                }
+                macanPindah();
+                giliran = 0;
             }
             refresh();
             cekMenang();
