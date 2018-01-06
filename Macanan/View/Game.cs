@@ -66,8 +66,10 @@ namespace Macanan
         Point cursor_Sekarang;
         AI ai = new AI();
         //baris 5 kolom 9
-        int giliran = 0;
-        int eaten = 0;
+
+        int giliran;
+        int eaten;
+        bool menang;
 
         Random rand = new Random();
         int pos1 = 0, pos2 = 0, pos3 = 0;
@@ -137,7 +139,13 @@ namespace Macanan
 
         private void reset()
         {
+            menang = false;
+            giliran = 0;
+            eaten = 0;
             sisaAnak = 12;
+
+            labelSisaAnak.Text = sisaAnak.ToString();
+            labelAnakDImakan.Text = eaten.ToString();
 
             for (int i = 0; i < 5; i++)
             {
@@ -269,6 +277,62 @@ namespace Macanan
                 }
             }
 
+
+            if (pindah_PosisiAwal.Y == y)
+            {
+                if (pindah_PosisiAwal.X <= x)
+                {
+                    for (int i = pindah_PosisiAwal.X; i < x; i++)   //ATAS
+                    {
+                        if (peta[i, y] == 'Y')
+                        {
+                            eaten += 1;
+                            peta[i, y] = 'E';
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = x; i < pindah_PosisiAwal.X; i++)   //BAWAH
+                    {
+                        if (peta[i, y] == 'Y')
+                        {
+                            eaten += 1;
+                            peta[i, y] = 'E';
+                        }
+                    }
+                }
+            }
+
+            if (pindah_PosisiAwal.X == x)
+            {
+                if (pindah_PosisiAwal.Y <= y)
+                {
+                    for (int i = pindah_PosisiAwal.Y; i < y; i++)   //KIRI
+                    {
+                        if (peta[x, i] == 'Y')
+                        {
+                            eaten += 1;
+                            peta[x, i] = 'E';
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = y; i < pindah_PosisiAwal.Y; i++)   //KANAN
+                    {
+                        if (peta[x, i] == 'Y')
+                        {
+                            eaten += 1;
+                            peta[x, i] = 'E';
+                        }
+                    }
+                }
+            }
+            
+
+            
+
             if (peta[x,y] != 'E')
             {
                 eaten += 1;
@@ -285,14 +349,19 @@ namespace Macanan
 
         public void cekMenang()
         {
-            if (eaten == 6)
+            if (eaten >= 6)
             {
+                menang = true;
                 MessageBox.Show("Menang");
             }
         }
 
         private void bidak(int x, int y)
         {
+            if (menang)
+            {
+                return;
+            }
             cursor_Sekarang.X = x;
             cursor_Sekarang.Y = y;
             if (giliran == 0)
