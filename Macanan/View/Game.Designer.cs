@@ -572,7 +572,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1015, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 37);
+            this.label1.Size = new System.Drawing.Size(113, 30);
             this.label1.TabIndex = 38;
             this.label1.Text = "Sisa Anak :";
             // 
@@ -582,7 +582,7 @@
             this.labelSisaAnak.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSisaAnak.Location = new System.Drawing.Point(1134, 5);
             this.labelSisaAnak.Name = "labelSisaAnak";
-            this.labelSisaAnak.Size = new System.Drawing.Size(32, 37);
+            this.labelSisaAnak.Size = new System.Drawing.Size(24, 30);
             this.labelSisaAnak.TabIndex = 39;
             this.labelSisaAnak.Text = "0";
             this.labelSisaAnak.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -593,7 +593,7 @@
             this.labelAnakDImakan.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAnakDImakan.Location = new System.Drawing.Point(958, 5);
             this.labelAnakDImakan.Name = "labelAnakDImakan";
-            this.labelAnakDImakan.Size = new System.Drawing.Size(32, 37);
+            this.labelAnakDImakan.Size = new System.Drawing.Size(24, 30);
             this.labelAnakDImakan.TabIndex = 41;
             this.labelAnakDImakan.Text = "0";
             this.labelAnakDImakan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -604,13 +604,13 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(781, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 37);
+            this.label3.Size = new System.Drawing.Size(159, 30);
             this.label3.TabIndex = 40;
             this.label3.Text = "Anak Dimakan :";
             // 
             // Game
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Controls.Add(this.labelAnakDImakan);
@@ -658,7 +658,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Game";
-            this.Size = new System.Drawing.Size(1189, 628);
+            this.Size = new System.Drawing.Size(1200, 650);
             this.VisibleChanged += new System.EventHandler(this.Game_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.x0y0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.x2y0)).EndInit();

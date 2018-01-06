@@ -17,7 +17,8 @@ namespace Macanan
         public MainForm()
         {
             InitializeComponent();
-            menu1.pictureBoxPlay.Click += new EventHandler(ButtonStart_Clicked);
+            menu1.pictureBoxAI.Click += new EventHandler(ButtonStartAI_Clicked);
+            menu1.pictureBoxPlayer.Click += new EventHandler(ButtonStartPlayer_Clicked);
             menu1.pictureBoxHelp.Click += new EventHandler(ButtonHelp_Clicked);
 
             help1.pictureBox1.Click += new EventHandler(BackToMenu_Clicked);
@@ -55,9 +56,15 @@ namespace Macanan
             changeView("menu");
         }
 
-        private void ButtonStart_Clicked(object sender, EventArgs e)
+        private void ButtonStartAI_Clicked(object sender, EventArgs e)
         {
             changeView("game");
+            game1.mode = 0;
+        }
+        private void ButtonStartPlayer_Clicked(object sender, EventArgs e)
+        {
+            changeView("game");
+            game1.mode = 1;
         }
 
         private void ButtonHelp_Clicked(object sender, EventArgs e)
